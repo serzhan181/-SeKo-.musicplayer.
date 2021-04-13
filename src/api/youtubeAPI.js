@@ -1,5 +1,4 @@
 import axios from 'axios'
-require('dotenv').config()
 
 export function getSearchRes(query) {
   return axios.get(`https://musiicplayer-api.herokuapp.com/search?q=${query}`)
