@@ -22,9 +22,9 @@ const SongItem = ({
         <SongMetaImg
           src={loadedSongId === id ? 'assets/songLoading.svg' : imageStateSrc}
           alt='song state'
-          onClick={() =>
+          onClick={() => {
             toggleSetSongOrSwitchState(id, { title, author, img, id })
-          }
+          }}
         />
       </SongImg>
       <GroupDetails>

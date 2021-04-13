@@ -39,7 +39,7 @@ class Audio {
     if (query !== this.lastSearchQuery) {
       this.setHaveSongsLoaded()
       runInAction(() => {
-        this.searchQuery = query // to not overload server.
+        this.lastSearchQuery = query
       })
 
       const res = await getSearchRes(query)

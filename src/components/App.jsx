@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react'
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import { theme } from '../store/ThemeStore'
 import styled, { ThemeProvider, withTheme } from 'styled-components'
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Header from './Header'
+import MainList from './Main'
+import { theme } from '../store/ThemeStore'
 import { PlayerContainer } from './Player'
 import { Errorpage } from './ErrorPage'
-import Main from './Main'
 
 const App = () => {
   const player = useRef(null)
@@ -32,7 +32,7 @@ const App = () => {
           <div className='container'>
             <Switch>
               <Route path='/search'>
-                <Main player={player} />
+                <MainList player={player} />
               </Route>
 
               <Route path='/error' component={Errorpage} />
@@ -45,14 +45,11 @@ const App = () => {
   )
 }
 
-const Wrapper = styled.div`
+const MainWrapper = styled.div`
   body {
     width: 100%;
-    overflow: hidden;
     background-color: ${(props) => props.theme.primary};
   }
 `
 
-const MainWrapper = withTheme(Wrapper)
-
-export default App
+export default withTheme(App)

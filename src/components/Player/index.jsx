@@ -49,6 +49,7 @@ export const PlayerContainer = observer(({ player }) => {
     } else {
       player.current.pause()
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [audio.isPlayingId, audio.curSong, player])
 
   const [errDisplayValue, setErrDisplayValue] = useState('none')

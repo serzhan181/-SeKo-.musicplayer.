@@ -26,7 +26,7 @@ const Main = observer(({ player }) => {
     } else {
       player.current.pause()
     }
-  }, [audio.isPlayingId, audio.curSong, player])
+  }, [player])
 
   return (
     <>
