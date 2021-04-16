@@ -1,40 +1,23 @@
 {
-  "name": "music_player",
+  "name": "with-tailwindcss",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "axios": "^0.21.0",
-    "dotenv": "^8.2.0",
-    "mobx": "^6.0.4",
-    "mobx-react-lite": "^3.1.6",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.1",
-    "styled-components": "^5.2.1"
-  },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
   },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
+  "dependencies": {
+    "classnames": "^2.3.1",
+    "mobx": "^6.2.0",
+    "mobx-react-lite": "^3.2.0",
+    "next": "latest",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
   },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "autoprefixer": "^10.0.4",
+    "postcss": "^8.1.10",
+    "tailwindcss": "^2.1.1"
   }
 }
