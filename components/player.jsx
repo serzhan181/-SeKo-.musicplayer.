@@ -88,14 +88,14 @@ const PlayerComponent = observer(() => {
             'translate-y-20': !player.currentPlaying,
             'translate-y-0': player.currentPlaying,
           },
-          'fixed h-10 w-full bottom-0 left-0 right-0 z-50 px-3 bg-gray-50'
+          'fixed h-14 w-full bottom-0 left-0 right-0 z-50 px-3 bg-gray-50'
         )}
       >
         {player.currentPlaying && (
           <>
             <div className='grid grid-cols-2 md:grid-cols-3'>
               <div className='w-full flex-center'>
-                <div className='flex-center gap-4 lg:gap-10  w-max'>
+                <div className='flex-center gap-4 lg:gap-10 w-max'>
                   <Icon
                     src='/images/prev.svg'
                     onClick={() => player.setPrev(player.currentPlaying?.id)}
@@ -156,7 +156,8 @@ const PlayerComponent = observer(() => {
             <div className='relative'>
               <input
                 type='range'
-                className='w-full bg-red-300 absolute h-4/5 left-0 -top-10 outline-none'
+                className='w-full absolute h-4/5 bg-transparent left-0 -top-12 outline-none'
+                title={player.currentPlaying?.title}
                 value={dur ? (curDur * 100) / dur : 0}
                 onChange={handleProgress}
               />
