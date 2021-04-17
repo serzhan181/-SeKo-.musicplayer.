@@ -127,7 +127,7 @@ const PlayerComponent = observer(() => {
                     }
                     width={30}
                     height={30}
-                    className='rounded-full animate-spin-slow'
+                    className='rounded-full object-cover animate-spin-slow'
                   />
                 </div>
                 <h3 className='text-sm font-semibold text-center mt-2'>
