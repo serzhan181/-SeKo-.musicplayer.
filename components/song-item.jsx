@@ -20,7 +20,11 @@ const SongItem = observer(({ imageUrl, title, authorName, id }) => {
           className={`${
             sampleImg === 'play_on.svg' ? 'opacity-100' : 'opacity-0'
           } hover:opacity-100 absolute cursor-pointer top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 transition-opacity`}
-          onClick={() => player.setSample({ imageUrl, title, authorName, id })}
+                  onClick={
+                      player.currentPlaying?.isPlayingId ?
+                      () => player.toggleIsPlayingId(player.currentPlaying?.id) :
+                      () => player.setSample({ imageUrl, title, authorName, id })
+                  }
         >
           <Image
             src={`/images/${sampleImg}`}
